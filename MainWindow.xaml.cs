@@ -68,7 +68,7 @@ namespace WindowOnTop
         public MainWindow()
         {
             InitializeComponent();
-            trayIcon = new SimpleTrayIcon(this, Properties.Resources.ontop);
+            trayIcon = new SimpleTrayIcon(this, false, Properties.Resources.ontop);
             trayIcon.Visible = true;
             Loaded += (s, e) =>
             {

@@ -39,11 +39,12 @@
             and the <see cref="T:WpfTrayIcon.TrayIcon"/>.
             </summary>
         </member>
-        <member name="M:WpfTrayIcon.SimpleTrayIcon.#ctor(System.Windows.Window,System.Drawing.Icon)">
+        <member name="M:WpfTrayIcon.SimpleTrayIcon.#ctor(System.Windows.Window,System.Boolean,System.Drawing.Icon)">
             <summary>
             Creates a new <see cref="T:WpfTrayIcon.SimpleTrayIcon"/>. 
             </summary>
             <param name="window">Corresponding <see cref="T:System.Windows.Window"/>.</param>
+            <param name="showBaloonTip">Should a balloon tip be shown on collapsing?</param>
             <param name="icon">Icon of the <see cref="T:WpfTrayIcon.SimpleTrayIcon"/>.</param>
         </member>
         <member name="T:WpfTrayIcon.ToolTipIcon">
@@ -108,7 +109,7 @@
             Sets the visibility of the tray icon.
             </summary>
         </member>
-        <member name="M:WpfTrayIcon.TrayIcon.#ctor(System.Windows.Window,System.Drawing.Icon)">
+        <member name="M:WpfTrayIcon.TrayIcon.#ctor(System.Windows.Window,System.Boolean,System.Drawing.Icon)">
             <summary>
             Sets the visibility of the tray icon.
             </summary>
