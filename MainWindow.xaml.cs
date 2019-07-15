@@ -40,7 +40,7 @@ namespace WindowOnTop
 
         private StoredSettings settings = new StoredSettings();
 
-        private const String filename = "settings.bin";
+        private const string filename = "settings.bin";
         public enum GWL
         {
             GWL_WNDPROC = (-4),
@@ -70,6 +70,9 @@ namespace WindowOnTop
             InitializeComponent();
             trayIcon = new SimpleTrayIcon(this, false, Properties.Resources.ontop);
             trayIcon.Visible = true;
+            WindowState = WindowState.Minimized;
+            Visibility = Visibility.Hidden;
+
             Loaded += (s, e) =>
             {
                 if (File.Exists(filename))
@@ -84,8 +87,6 @@ namespace WindowOnTop
                     {
                     }
                 }
-                this.WindowState = WindowState.Minimized;
-                this.Visibility = Visibility.Hidden;
             };
         }
 
@@ -265,6 +266,7 @@ namespace WindowOnTop
                 var serializer = new BinaryFormatter();
                 serializer.Serialize(testFileStream, settings);
                 testFileStream.Close();
+                MessageBox.Show("Settings saved.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception e)
             {
